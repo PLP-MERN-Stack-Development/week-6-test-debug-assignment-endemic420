@@ -1,0 +1,26 @@
+{
+  "name": "week-6-test-debug-assignment-endemic420",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "test": "concurrently \"npm run test:server\" \"npm run test:client\"",
+    "test:unit": "concurrently \"npm run test:server:unit\" \"npm run test:client:unit\"",
+    "test:integration": "concurrently \"npm run test:server:integration\" \"npm run test:client:integration\"",
+    "test:coverage": "concurrently \"npm run test:server:coverage\" \"npm run test:client:coverage\"",
+    "test:e2e": "cd client && npm run test:e2e",
+    "test:server": "cd server && npm test",
+    "test:server:unit": "cd server && npm run test:unit",
+    "test:server:integration": "cd server && npm run test:integration",
+    "test:server:coverage": "cd server && npm run test:coverage",
+    "test:client": "cd client && npm test",
+    "test:client:unit": "cd client && npm run test:unit",
+    "test:client:integration": "cd client && npm run test:integration",
+    "test:client:coverage": "cd client && npm run test:coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1"
+}
